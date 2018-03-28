@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Login = new System.Windows.Forms.Button();
             this.UsernameBox = new System.Windows.Forms.TextBox();
-            this.PassBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ErrorLabel = new System.Windows.Forms.Label();
+            this.PassBox = new System.Windows.Forms.TextBox();
+            this.Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // Login
-            // 
-            this.Login.Location = new System.Drawing.Point(289, 229);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(75, 29);
-            this.Login.TabIndex = 0;
-            this.Login.Text = "Login";
-            this.Login.UseVisualStyleBackColor = true;
-            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // UsernameBox
             // 
@@ -52,13 +42,6 @@
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(171, 22);
             this.UsernameBox.TabIndex = 1;
-            // 
-            // PassBox
-            // 
-            this.PassBox.Location = new System.Drawing.Point(239, 176);
-            this.PassBox.Name = "PassBox";
-            this.PassBox.Size = new System.Drawing.Size(171, 22);
-            this.PassBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -88,6 +71,23 @@
             this.ErrorLabel.Text = "Error";
             this.ErrorLabel.Visible = false;
             // 
+            // PassBox
+            // 
+            this.PassBox.Location = new System.Drawing.Point(239, 176);
+            this.PassBox.Name = "PassBox";
+            this.PassBox.Size = new System.Drawing.Size(171, 22);
+            this.PassBox.TabIndex = 2;
+            // 
+            // Login
+            // 
+            this.Login.Location = new System.Drawing.Point(289, 229);
+            this.Login.Name = "Login";
+            this.Login.Size = new System.Drawing.Size(75, 29);
+            this.Login.TabIndex = 0;
+            this.Login.Text = "Login";
+            this.Login.UseVisualStyleBackColor = true;
+            this.Login.Click += new System.EventHandler(this.Login_Click);
+            // 
             // Project3Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -109,12 +109,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Login;
         private System.Windows.Forms.TextBox UsernameBox;
-        private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.TextBox PassBox;
+        private System.Windows.Forms.Button Login;
     }
 }
 

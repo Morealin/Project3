@@ -28,10 +28,11 @@ namespace Project3
             string pass, user;
             user = UsernameBox.Text;
             pass = PassBox.Text;
-            if (user.ToLower() == "username" && pass.ToLower() == "password")
+            if (user.ToLower() == "home" && pass.ToLower() == "1234")
             {
-                ErrorLabel.Text = "Correct";
-                ErrorLabel.Visible = true;
+                SelectionTab select = new SelectionTab();
+                this.Hide();
+                select.Show();
             }
             else
             {
