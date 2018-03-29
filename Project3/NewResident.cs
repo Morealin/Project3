@@ -38,10 +38,24 @@ namespace Project3
         private void btn_Add_Click(object sender, EventArgs e)
         {
             db.Open();
+            string fee;
+            string room = drop_Floor.SelectedItem.ToString() + comboBox1.SelectedItem.ToString();
+            if (drop_ResType.SelectedItem.ToString() == "Student Worker")
+            {
+                fee = "1245";
+            }
+            else if (drop_ResType.SelectedItem.ToString() == "Student Athlete")
+            {
+                fee = "1200";
+            }
+            else
+            {
+                fee = "100";
+            }
             SqlCommand sqcmd = new SqlCommand("Select * from [Resident] where ResID='" + txt_ResID.Text +"'", db);
             SqlCommand cmd = db.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into [Resident] (ResID, FirstName,LastName,ResType) values('" + txt_ResID.Text + "','" + txt_FName.Text + "','" + txt_LName.Text + "','" + drop_ResType.Text + "')";
+            cmd.CommandText = "insert into [Resident] (ResID, FirstName,LastName,ResType,FloorNum,RoomNum,Rent) values('" + txt_ResID.Text + "','" + txt_FName.Text + "','" + txt_LName.Text + "','" + drop_ResType.Text + "','" + drop_Floor + "','" + room + "','" + fee + "')";
             cmd.ExecuteNonQuery();
             db.Close();
             txt_ResID.Text = "";
@@ -57,6 +71,24 @@ namespace Project3
             if (resType != drop_ResType.SelectedItem.ToString())
             {
                 resType = drop_ResType.SelectedItem.ToString();
+            }
+        }
+
+        private void drop_Floor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string FloorNum = "";
+            if (FloorNum != drop_Floor.SelectedItem.ToString())
+            {
+                FloorNum = drop_Floor.SelectedItem.ToString();
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string RoomNum = "";
+            if (RoomNum != comboBox1.SelectedItem.ToString())
+            {
+                RoomNum = comboBox1.SelectedItem.ToString();
             }
         }
     }

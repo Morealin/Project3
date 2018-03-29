@@ -29,11 +29,8 @@ namespace Project3
 
         private void ResidentSearch_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'db_ResidentsDataSet1.Resident' table. You can move, or remove it, as needed.
-            this.residentTableAdapter1.Fill(this.db_ResidentsDataSet1.Resident);
-            // TODO: This line of code loads data into the 'db_ResidentsDataSet.Resident' table. You can move, or remove it, as needed.
-            //this.residentTableAdapter.Fill(this.db_ResidentsDataSet.Resident);
-
+            // TODO: This line of code loads data into the 'db_ResidentsDataSet2.Resident' table. You can move, or remove it, as needed.
+            this.residentTableAdapter2.Fill(this.db_ResidentsDataSet2.Resident);
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -54,11 +51,21 @@ namespace Project3
         {
             db.Open();
             string search = txt_Search.Text;
-            SqlCommand sqcmd = new SqlCommand("Select * from [Resident] where FirstName Like '%" + search + "%' OR LastName Like '%" + search + "%' OR ResID Like '%" + search + "%'", db);
+            SqlCommand sqcmd = new SqlCommand("Select * from [Resident] where FirstName Like '%" + search + "%' OR LastName Like '%" + search + "%' OR ResID Like '%" + search + "%' OR FloorNum Like'%" + search + "%' OR RoomNum Like '%" + search + "%'", db);
             SqlDataAdapter da = new SqlDataAdapter(sqcmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            db.Close();
+            if (dt.Rows.Count > 0)
+            {
+                dataShow_Resident.DataSource = dt;
+                db.Close();
+            }
+            else
+            {
+                MessageBox.Show("Data Inserted");
+
+                db.Close();
+            }
         }
     }
 }

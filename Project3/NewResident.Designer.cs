@@ -39,6 +39,10 @@
             this.lbl_ResType = new System.Windows.Forms.Label();
             this.drop_ResType = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
+            this.drop_Floor = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Logout2
@@ -133,7 +137,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(138, 263);
+            this.btn_Add.Location = new System.Drawing.Point(138, 302);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 28);
             this.btn_Add.TabIndex = 10;
@@ -141,11 +145,71 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // drop_Floor
+            // 
+            this.drop_Floor.FormattingEnabled = true;
+            this.drop_Floor.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.drop_Floor.Location = new System.Drawing.Point(138, 223);
+            this.drop_Floor.Name = "drop_Floor";
+            this.drop_Floor.Size = new System.Drawing.Size(121, 24);
+            this.drop_Floor.TabIndex = 11;
+            this.drop_Floor.SelectedIndexChanged += new System.EventHandler(this.drop_Floor_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(81, 223);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Floor";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10"});
+            this.comboBox1.Location = new System.Drawing.Point(138, 254);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(74, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Room";
+            // 
             // NewResident
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 378);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.drop_Floor);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.drop_ResType);
             this.Controls.Add(this.lbl_ResType);
@@ -177,5 +241,9 @@
         private System.Windows.Forms.Label lbl_ResType;
         private System.Windows.Forms.ComboBox drop_ResType;
         private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.ComboBox drop_Floor;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
     }
 }
