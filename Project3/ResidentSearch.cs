@@ -29,8 +29,9 @@ namespace Project3
 
         private void ResidentSearch_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'db_ResidentsDataSet2.Resident' table. You can move, or remove it, as needed.
-            this.residentTableAdapter2.Fill(this.db_ResidentsDataSet2.Resident);
+            // TODO: This line of code loads data into the 'db_ResidentsDataSet3.Resident' table. You can move, or remove it, as needed.
+            this.residentTableAdapter3.Fill(this.db_ResidentsDataSet3.Resident);
+
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)

@@ -34,6 +34,11 @@
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FloorNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.residentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_ResidentsDataSet2 = new Project3.db_ResidentsDataSet2();
             this.residentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.db_ResidentsDataSet1 = new Project3.db_ResidentsDataSet1();
             this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -44,19 +49,19 @@
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
             this.residentTableAdapter1 = new Project3.db_ResidentsDataSet1TableAdapters.ResidentTableAdapter();
-            this.db_ResidentsDataSet2 = new Project3.db_ResidentsDataSet2();
-            this.residentBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.residentTableAdapter2 = new Project3.db_ResidentsDataSet2TableAdapters.ResidentTableAdapter();
-            this.FloorNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.db_ResidentsDataSet3 = new Project3.db_ResidentsDataSet3();
+            this.residentBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.residentTableAdapter3 = new Project3.db_ResidentsDataSet3TableAdapters.ResidentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataShow_Resident)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataShow_Resident
@@ -72,7 +77,7 @@
             this.FloorNum,
             this.RoomNum,
             this.Rent});
-            this.dataShow_Resident.DataSource = this.residentBindingSource2;
+            this.dataShow_Resident.DataSource = this.residentBindingSource3;
             this.dataShow_Resident.Location = new System.Drawing.Point(60, 115);
             this.dataShow_Resident.Name = "dataShow_Resident";
             this.dataShow_Resident.RowTemplate.Height = 24;
@@ -103,6 +108,34 @@
             this.resTypeDataGridViewTextBoxColumn.DataPropertyName = "ResType";
             this.resTypeDataGridViewTextBoxColumn.HeaderText = "ResType";
             this.resTypeDataGridViewTextBoxColumn.Name = "resTypeDataGridViewTextBoxColumn";
+            // 
+            // FloorNum
+            // 
+            this.FloorNum.DataPropertyName = "FloorNum";
+            this.FloorNum.HeaderText = "FloorNum";
+            this.FloorNum.Name = "FloorNum";
+            // 
+            // RoomNum
+            // 
+            this.RoomNum.DataPropertyName = "RoomNum";
+            this.RoomNum.HeaderText = "RoomNum";
+            this.RoomNum.Name = "RoomNum";
+            // 
+            // Rent
+            // 
+            this.Rent.DataPropertyName = "Rent";
+            this.Rent.HeaderText = "Rent";
+            this.Rent.Name = "Rent";
+            // 
+            // residentBindingSource2
+            // 
+            this.residentBindingSource2.DataMember = "Resident";
+            this.residentBindingSource2.DataSource = this.db_ResidentsDataSet2;
+            // 
+            // db_ResidentsDataSet2
+            // 
+            this.db_ResidentsDataSet2.DataSetName = "db_ResidentsDataSet2";
+            this.db_ResidentsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // residentBindingSource1
             // 
@@ -169,37 +202,23 @@
             // 
             this.residentTableAdapter1.ClearBeforeFill = true;
             // 
-            // db_ResidentsDataSet2
-            // 
-            this.db_ResidentsDataSet2.DataSetName = "db_ResidentsDataSet2";
-            this.db_ResidentsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // residentBindingSource2
-            // 
-            this.residentBindingSource2.DataMember = "Resident";
-            this.residentBindingSource2.DataSource = this.db_ResidentsDataSet2;
-            // 
             // residentTableAdapter2
             // 
             this.residentTableAdapter2.ClearBeforeFill = true;
             // 
-            // FloorNum
+            // db_ResidentsDataSet3
             // 
-            this.FloorNum.DataPropertyName = "FloorNum";
-            this.FloorNum.HeaderText = "FloorNum";
-            this.FloorNum.Name = "FloorNum";
+            this.db_ResidentsDataSet3.DataSetName = "db_ResidentsDataSet3";
+            this.db_ResidentsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // RoomNum
+            // residentBindingSource3
             // 
-            this.RoomNum.DataPropertyName = "RoomNum";
-            this.RoomNum.HeaderText = "RoomNum";
-            this.RoomNum.Name = "RoomNum";
+            this.residentBindingSource3.DataMember = "Resident";
+            this.residentBindingSource3.DataSource = this.db_ResidentsDataSet3;
             // 
-            // Rent
+            // residentTableAdapter3
             // 
-            this.Rent.DataPropertyName = "Rent";
-            this.Rent.HeaderText = "Rent";
-            this.Rent.Name = "Rent";
+            this.residentTableAdapter3.ClearBeforeFill = true;
             // 
             // ResidentSearch
             // 
@@ -215,12 +234,14 @@
             this.Text = "ResidentSearch";
             this.Load += new System.EventHandler(this.ResidentSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataShow_Resident)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +270,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FloorNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rent;
+        private db_ResidentsDataSet3 db_ResidentsDataSet3;
+        private System.Windows.Forms.BindingSource residentBindingSource3;
+        private db_ResidentsDataSet3TableAdapters.ResidentTableAdapter residentTableAdapter3;
     }
 }
