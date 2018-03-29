@@ -30,5 +30,12 @@ namespace Project3
             this.Hide();
             newRes.Show();
         }
+
+        private void btn_ShowRes_Click(object sender, EventArgs e)
+        {
+            ResidentSearch res = new ResidentSearch();
+            this.Hide();
+            res.Show();
+        }
     }
 }

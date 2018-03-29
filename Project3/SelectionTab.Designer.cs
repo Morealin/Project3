@@ -51,6 +51,7 @@
             this.btn_ShowRes.TabIndex = 1;
             this.btn_ShowRes.Text = "Search";
             this.btn_ShowRes.UseVisualStyleBackColor = true;
+            this.btn_ShowRes.Click += new System.EventHandler(this.btn_ShowRes_Click);
             // 
             // btn_Logout
             // 
