@@ -129,6 +129,7 @@
             this.drop_ResType.Name = "drop_ResType";
             this.drop_ResType.Size = new System.Drawing.Size(121, 24);
             this.drop_ResType.TabIndex = 9;
+            this.drop_ResType.SelectedIndexChanged += new System.EventHandler(this.drop_ResType_SelectedIndexChanged);
             // 
             // btn_Add
             // 

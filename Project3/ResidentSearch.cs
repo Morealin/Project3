@@ -29,8 +29,10 @@ namespace Project3
 
         private void ResidentSearch_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'db_ResidentsDataSet1.Resident' table. You can move, or remove it, as needed.
+            this.residentTableAdapter1.Fill(this.db_ResidentsDataSet1.Resident);
             // TODO: This line of code loads data into the 'db_ResidentsDataSet.Resident' table. You can move, or remove it, as needed.
-            this.residentTableAdapter.Fill(this.db_ResidentsDataSet.Resident);
+            //this.residentTableAdapter.Fill(this.db_ResidentsDataSet.Resident);
 
         }
 

@@ -30,20 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataShow_Resident = new System.Windows.Forms.DataGridView();
-            this.db_ResidentsDataSet = new Project3.db_ResidentsDataSet();
-            this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.residentTableAdapter = new Project3.db_ResidentsDataSetTableAdapters.ResidentTableAdapter();
             this.resIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.residentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.db_ResidentsDataSet = new Project3.db_ResidentsDataSet();
+            this.residentTableAdapter = new Project3.db_ResidentsDataSetTableAdapters.ResidentTableAdapter();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_Search = new System.Windows.Forms.TextBox();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.btn_Back = new System.Windows.Forms.Button();
+            this.db_ResidentsDataSet1 = new Project3.db_ResidentsDataSet1();
+            this.residentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.residentTableAdapter1 = new Project3.db_ResidentsDataSet1TableAdapters.ResidentTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataShow_Resident)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataShow_Resident
@@ -56,27 +61,13 @@
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.resTypeDataGridViewTextBoxColumn});
-            this.dataShow_Resident.DataSource = this.residentBindingSource;
+            this.dataShow_Resident.DataSource = this.residentBindingSource1;
             this.dataShow_Resident.Location = new System.Drawing.Point(60, 115);
             this.dataShow_Resident.Name = "dataShow_Resident";
             this.dataShow_Resident.RowTemplate.Height = 24;
             this.dataShow_Resident.Size = new System.Drawing.Size(746, 349);
             this.dataShow_Resident.TabIndex = 0;
             this.dataShow_Resident.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataShow_Resident_CellContentClick);
-            // 
-            // db_ResidentsDataSet
-            // 
-            this.db_ResidentsDataSet.DataSetName = "db_ResidentsDataSet";
-            this.db_ResidentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // residentBindingSource
-            // 
-            this.residentBindingSource.DataMember = "Resident";
-            this.residentBindingSource.DataSource = this.db_ResidentsDataSet;
-            // 
-            // residentTableAdapter
-            // 
-            this.residentTableAdapter.ClearBeforeFill = true;
             // 
             // resIdDataGridViewTextBoxColumn
             // 
@@ -101,6 +92,20 @@
             this.resTypeDataGridViewTextBoxColumn.DataPropertyName = "ResType";
             this.resTypeDataGridViewTextBoxColumn.HeaderText = "ResType";
             this.resTypeDataGridViewTextBoxColumn.Name = "resTypeDataGridViewTextBoxColumn";
+            // 
+            // residentBindingSource
+            // 
+            this.residentBindingSource.DataMember = "Resident";
+            this.residentBindingSource.DataSource = this.db_ResidentsDataSet;
+            // 
+            // db_ResidentsDataSet
+            // 
+            this.db_ResidentsDataSet.DataSetName = "db_ResidentsDataSet";
+            this.db_ResidentsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // residentTableAdapter
+            // 
+            this.residentTableAdapter.ClearBeforeFill = true;
             // 
             // btn_Search
             // 
@@ -139,6 +144,20 @@
             this.btn_Back.UseVisualStyleBackColor = true;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
+            // db_ResidentsDataSet1
+            // 
+            this.db_ResidentsDataSet1.DataSetName = "db_ResidentsDataSet1";
+            this.db_ResidentsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // residentBindingSource1
+            // 
+            this.residentBindingSource1.DataMember = "Resident";
+            this.residentBindingSource1.DataSource = this.db_ResidentsDataSet1;
+            // 
+            // residentTableAdapter1
+            // 
+            this.residentTableAdapter1.ClearBeforeFill = true;
+            // 
             // ResidentSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,8 +172,10 @@
             this.Text = "ResidentSearch";
             this.Load += new System.EventHandler(this.ResidentSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataShow_Resident)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_ResidentsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.residentBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +195,8 @@
         private System.Windows.Forms.TextBox txt_Search;
         private System.Windows.Forms.Button btn_Logout;
         private System.Windows.Forms.Button btn_Back;
+        private db_ResidentsDataSet1 db_ResidentsDataSet1;
+        private System.Windows.Forms.BindingSource residentBindingSource1;
+        private db_ResidentsDataSet1TableAdapters.ResidentTableAdapter residentTableAdapter1;
     }
 }
