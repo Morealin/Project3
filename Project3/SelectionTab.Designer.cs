@@ -41,6 +41,7 @@
             this.btn_NewRes.TabIndex = 0;
             this.btn_NewRes.Text = "Add";
             this.btn_NewRes.UseVisualStyleBackColor = true;
+            this.btn_NewRes.Click += new System.EventHandler(this.btn_NewRes_Click);
             // 
             // btn_ShowRes
             // 

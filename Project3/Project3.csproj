@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NewResident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewResident.Designer.cs">
+      <DependentUpon>NewResident.cs</DependentUpon>
+    </Compile>
     <Compile Include="Project3Gui.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     <Compile Include="SelectionTab.Designer.cs">
       <DependentUpon>SelectionTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="NewResident.resx">
+      <DependentUpon>NewResident.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Project3Gui.resx">
       <DependentUpon>Project3Gui.cs</DependentUpon>
     </EmbeddedResource>

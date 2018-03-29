@@ -7,28 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Project3
 {
-    public partial class SelectionTab : Form
+    public partial class RsidentSearch : Form
     {
-        public SelectionTab()
+
+        SqlConnection db = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=db_Residents;Integrated Security=True");
+
+        public RsidentSearch()
         {
             InitializeComponent();
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
+        private void btn_Logout4_Click(object sender, EventArgs e)
         {
             Project3Gui login = new Project3Gui();
             this.Hide();
             login.Show();
         }
 
-        private void btn_NewRes_Click(object sender, EventArgs e)
+        private void btn_Back4_Click(object sender, EventArgs e)
         {
-            NewResident newRes = new NewResident();
+            SelectionTab select = new SelectionTab();
             this.Hide();
-            newRes.Show();
+            select.Show();
         }
     }
 }

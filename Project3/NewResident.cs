@@ -24,21 +24,40 @@ namespace Project3
         private void btn_Logout2_Click(object sender, EventArgs e)
         {
             Project3Gui login = new Project3Gui();
-            this.Close();
+            this.Hide();
             login.Show();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
             SelectionTab select = new SelectionTab();
-            this.Close();
+            this.Hide();
             select.Show();
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            SqlCommand sqcmd = new SqlCommand();
-
+            SqlCommand sqcmd = new SqlCommand("Select * from [Resident] where ResID='" + txt_ResID+"'", db);
+            SqlDataAdapter da = new SqlDataAdapter(sqcmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                db.Close();
+                MessageBox.Show("Resident ID already exists");
+            }
+            else
+            {
+                SqlCommand cmd = db.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into [Resident] (ResID, FirstName,LastName,ResType) values('" + txt_ResID.Text + "','" + txt_FName.Text + "','" + txt_LName.Text + "','" + drop_ResType.Text + "')";
+                cmd.ExecuteNonQuery();
+                db.Close();
+                txt_ResID.Text = "";
+                txt_FName.Text = "";
+                txt_LName.Text = "";
+                MessageBox.Show("Data Inserted");
+            }
         }
     }
 }
